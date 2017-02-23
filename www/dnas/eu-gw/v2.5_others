@@ -1,1 +1,3 @@
-others.php
+<?php
+include("./others.php");
+?>
