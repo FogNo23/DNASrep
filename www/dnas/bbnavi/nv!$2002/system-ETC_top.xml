@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 001001015 -->
+<RESOURCE screen_w="640" screen_h="480" version="1.1" xmlns="http://www.scei.co.jp/bn/2002/">
+  <SCRIPT id="main" src="top" type="binary/small"/>
+  <SCRIPT id="top_list" src="top_list" type="binary/small"/>
+  <SCRIPT id="top_item" src="top_item" type="binary/small"/>
+  <SCRIPT id="top_camera" src="top_camera" type="binary/small"/>
+  <SCRIPT id="focus" src="parts/focus" type="binary/small"/>
+  <SCRIPT id="scroll_bar" src="parts/scroll_bar" type="binary/small"/>
+  <LINK id="bg" href="common/bg.xml" />
+  <LINK id="link_sysupdate" href="utility/sysupdate.xml" />
+  <LINK id="script_cdplayer"  href="music/music_player.xml" type="binary/small" />
+  <LINK id="script_dvdplayer"  href="music/music_player.xml" type="binary/small" />
+  <LINK id="script_gameplayer"  href="music/music_player.xml" type="binary/small" />
+  <LINK id="script_discpage"  href="system/psbbdisc.xml" type="binary/small" />
+  <IMG id="tex_crystal0" src="texture/crystal1.tm2" />
+  <IMG id="tex_crystal1" src="texture/crystal2.tm2" />
+  <IMG id="tex_crystal2" src="texture/crystal3.tm2" />
+  <IMG id="tex_crystal3" src="texture/crystal4.tm2" />
+  <IMG id="channel_glowup" src="texture/glowup.tm2" />
+  <MENUGROUP id="GROUP-TOPLOGO" menutype="icon" order="center" bgm="enable" mediadetect="false">
+    <ITEM id="BNCH-PSBB" icon="file:/opt0/bn/script/texture/psbb256.tm2" link="subgroup" subgroup="GROUP-TOPMENU" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TOPMENU" menutype="label" order="left" bgm="enable" mediadetect="all" retgroup="GROUP-TOPLOGO" retitem="BNCH-PSBB" >
+      <TITLE id="TITLE-TOPMENU" label = "トップメニュー" />
+      <ITEM id="PSBB-GUIDE" label="PlayStation®BB ガイド" link="href" href="http://bb-scej.scei.co.jp/bbguide/main.xml" />
+      <ITEM id="ITEM-CHANNEL" label="チャンネル" link="subgroup" subgroup="GROUP-CHANNEL" />
+      <ITEM id="BNCH-UTILITY" label="各種設定" link="subgroup" subgroup="GROUP-UTILITY" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-CHANNEL" menutype="icon" order="center" bgm="enable" mediadetect="all" retgroup="GROUP-TOPMENU" retitem="ITEM-CHANNEL" >
+      <ITEM id="BNCH-GAME" icon="file:/opt0/bn/script/texture/game256.tm2" link="subgroup" subgroup="CHANNEL-GAME" />
+      <ITEM id="BNCH-MUSIC" icon="file:/opt0/bn/script/texture/music256.tm2" link="subgroup" subgroup="CHANNEL-MUSIC" />
+      <ITEM id="BNCH-MOVIE" icon="file:/opt0/bn/script/texture/movie256.tm2" link="subgroup" subgroup="CHANNEL-MOVIE" />
+      <ITEM id="BNCH-PHOTO" icon="file:/opt0/bn/script/texture/photo256.tm2" link="subgroup" subgroup="CHANNEL-PHOTO" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-GAME" menutype="label" order="left" bgm="disable" mediadetect="game" retgroup="GROUP-CHANNEL" retitem="BNCH-GAME" >
+      <TITLE id="TITLE-GAME" label = "ゲーム チャンネル" />
+      <ITEM id="BNCH-GAME-COLLECTION" label="コレクション" link="href" linkargs="mode=correction" href="file:/opt0/bn/script/game/game.xml" />
+      <ITEM id="PSBBCH-KOEI" label="コーエーテクモゲームス" link="href" href="http://psbb.gamecity.ne.jp/index.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-MUSIC" menutype="label" order="left" bgm="disable" mediadetect="music" retgroup="GROUP-CHANNEL" retitem="BNCH-MUSIC" >
+      <TITLE id="TITLE-MUSIC" label = "ミュージック チャンネル" />
+      <ITEM id="BNCH-MUSIC-FAVORITE" label="お気に入り" link="href" linkargs="mode=favorite" href="file:/opt0/bn/script/music/music.xml" />
+      <ITEM id="BNCH-MUSIC-COLLECTION" label="コレクション" link="href" linkargs="mode=collection" href="file:/opt0/bn/script/music/music.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-MOVIE" menutype="label" order="left" bgm="disable" mediadetect="movie" retgroup="GROUP-CHANNEL" retitem="BNCH-MOVIE" >
+      <TITLE id="TITLE-MOVIE" label = "ムービー チャンネル" />
+      <ITEM id="BNCH-MOVIE-FAVORITE" label="お気に入り" link="href" linkargs="mode=favorite" href="file:/opt0/bn/script/movie/movie.xml" />
+      <ITEM id="BNCH-MOVIE-COLLECTION" label="コレクション" link="href" linkargs="mode=correction" href="file:/opt0/bn/script/movie/movie.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-PHOTO" menutype="label" order="left" bgm="disable" mediadetect="photo" retgroup="GROUP-CHANNEL" retitem="BNCH-PHOTO" >
+      <TITLE id="TITLE-PHOTO" label = "フォト チャンネル" />
+      <ITEM id="BNCH-PHOTO-FAVORITE" label="お気に入り" link="href" linkargs="mode=favorite" href="file:/opt0/bn/script/photo/photo.xml" />
+      <ITEM id="BNCH-PHOTO-COLLECTION" label="コレクション" link="href" linkargs="mode=correction" href="file:/opt0/bn/script/photo/photo.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-UTILITY" menutype="label" order="left" bgm="continue" retgroup="GROUP-TOPMENU" retitem="BNCH-UTILITY" >
+      <TITLE id="TITLE-UTILITY" label = "各種設定" />
+      <ITEM id="UTILITY-SYSCONF" label="システム設定" link="href" href="file:/opt0/bn/script/utility/sysconf.xml" />
+      <ITEM id="UTILITY-NETCONF" label="ネットワーク設定" link="subgroup" subgroup="GROUP-NETCONF" />
+      <ITEM id="UTILITY-UPDATE" label="アップデート" link="href" href="file:/opt0/bn/script/utility/sysupdate.xml" />
+      <ITEM id="UTILITY-BROWSER" label="セーブデータ管理" link="href" href="file:/opt0/bn/script/utility/browser.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-NETCONF" menutype="label" order="left" bgm="continue" retgroup="GROUP-UTILITY" retitem="UTILITY-NETCONF" >
+      <TITLE id="TITLE-NETCONF" label="ネットワーク設定" />
+      <ITEM id="NETCONF-EDIT" label="確認・変更" link="href" linkargs="start=edit" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="NETCONF-TEST" label="接続テスト" link="href" linkargs="start=test" href="file:/opt0/bn/script/utility/netconf.xml" />
+  </MENUGROUP>
+</RESOURCE>
