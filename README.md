@@ -5,7 +5,7 @@ This is a small setup to run your own DNAS-net Authentication server for Playsta
 The scripts basically replay packets that were captured by the DNAS forever project.
 
 
-# PS2BBN Supported
+## PS2BBN Supported
 
 We Have Introduced Support for the Authored DNAS Update Binary Files and Its related XML Files That are Responsible for Making the BBN Work as Well as Be Capable of Updates.
 Note: You will Need a Legitimate and Licensed Copy of The Install Disk and/or The PS2HDD With an Activated BBN install.
